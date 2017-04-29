@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApiService } from '../../providers/api-service';
+import { CountForm } from '../../pages/count-form/count-form';
 
 /**
  * Generated class for the Login page.
@@ -20,7 +21,7 @@ export class Login {
   login()
   {
     console.log('clicked');
-    this.restapiService.login('podai');
+    this.navCtrl.setRoot(CountForm);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
