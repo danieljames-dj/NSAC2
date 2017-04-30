@@ -18,33 +18,103 @@
 
 <ion-content padding>
 
-	<ion-list>
+	<ion-card>
 
-	  <ion-item>
-	    <ion-label floating>Solar Panel Brand</ion-label>
-	    <ion-input type="text" value=""></ion-input>
-	  </ion-item>
+	  <ion-card-header>
+	    AC Monthly
+	  </ion-card-header>
 
-	  <ion-item>
-	    <ion-label floating>Maximum Power Input</ion-label>
-	    <ion-input type="text" value=""></ion-input>
-	  </ion-item>
+	  <ion-card-content>
+	  <div *ngFor="let key of obj.outputs.ac_monthly">
+	  	{{key}}
+	  </div>
+	    <!-- Add card content here! -->
+	  </ion-card-content>
 
-	  <ion-item>
-	    <ion-label floating>Number of rooms</ion-label>
-	    <ion-input type="numbers" value=""></ion-input>
-	  </ion-item>
+	</ion-card>
 
-	  <ion-item>
-	    <ion-label floating>Number of rooms</ion-label>
-	    <ion-input type="numbers" value=""></ion-input>
-	  </ion-item>
+	<ion-card>
 
-	  <ion-item>
-	    <ion-label floating>Number of rooms</ion-label>
-	    <ion-input type="numbers" value=""></ion-input>
-	  </ion-item>
+	  <ion-card-header>
+	    POA Monthly
+	  </ion-card-header>
 
-	</ion-list>
+	  <ion-card-content>
+	  <div *ngFor="let key of obj.outputs.poa_monthly">
+	  	{{key}}
+	  </div>
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    Solrad Monthly
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  <div *ngFor="let key of obj.outputs.solrad_monthly">
+	  	{{key}}
+	  </div>
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    DC Monthly
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  <div *ngFor="let key of obj.outputs.dc_monthly">
+	  	{{key}}
+	  </div>
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    AC Annual
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  	{{obj.outputs.ac_annual}}
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    Solrad Annual
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  	{{obj.outputs.solrad_annual}}
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
+
+	<ion-card>
+
+	  <ion-card-header>
+	    Capacity Factor
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  	{{obj.outputs.capacity_factor}}
+	    <!-- Add card content here! -->
+	  </ion-card-content>
+
+	</ion-card>
 
 </ion-content>
