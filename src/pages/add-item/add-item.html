@@ -16,18 +16,38 @@
 <ion-content padding>
 	<ion-list>
 	  <ion-item>
-	    <ion-label floating>Param 1</ion-label>
-	    <ion-input type="text" [(ngModel)]="param1">{{param1}}</ion-input>
+	    <ion-label floating>DC System Size (kW)</ion-label>
+	    <ion-input type="text" [(ngModel)]="dcSysSize">{{dcSysSize}}</ion-input>
 	  </ion-item>
-
 	  <ion-item>
-	    <ion-label floating>Param 2</ion-label>
-	    <ion-input type="text" [(ngModel)]="param2">{{param2}}</ion-input>
+		  <ion-label floating>Module Type</ion-label>
+		  <ion-select [(ngModel)]="modType">
+		    <ion-option>Standard</ion-option>
+		    <ion-option>Premium</ion-option>
+		    <ion-option>Thin Film</ion-option>
+		  </ion-select>
 	  </ion-item>
-
 	  <ion-item>
-	    <ion-label floating>Param 3</ion-label>
-	    <ion-input type="text" [(ngModel)]="param3">{{param3}}</ion-input>
+		  <ion-label floating>Array Type</ion-label>
+		  <ion-select [(ngModel)]="arrType">
+		    <ion-option>Fixed (open rack)</ion-option>
+		    <ion-option>Fixed (roof mount)</ion-option>
+		    <ion-option>1-Axis Tracking</ion-option>
+		    <ion-option>1-Axis Backtracking</ion-option>
+		    <ion-option>2-Axis Tracking</ion-option>
+		  </ion-select>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label floating>System Losses (%)</ion-label>
+	    <ion-input type="text" [(ngModel)]="sysLoss">{{sysLoss}}</ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label floating>Tilt (deg)</ion-label>
+	    <ion-input type="text" [(ngModel)]="tilt">{{tilt}}</ion-input>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label floating>Azimuth (deg)</ion-label>
+	    <ion-input type="text" [(ngModel)]="azimuth">{{azimuth}}</ion-input>
 	  </ion-item>
 	</ion-list>
 	<button ion-button (click)=submitItem()>Submit</button>

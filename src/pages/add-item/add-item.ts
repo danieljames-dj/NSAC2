@@ -15,9 +15,12 @@ import { Global } from '../../services/global/global';
 })
 export class AddItem {
 
-	param1 = "";
-	param2 = "";
-	param3 = "";
+	dcSysSize : any;
+	modType : any;
+	arrType : any;
+	sysLoss : any;
+	tilt : any;
+	azimuth : any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public global: Global) {
   }
@@ -27,10 +30,17 @@ export class AddItem {
   }
 
   submitItem() {
-  	var obj = {"p1": this.param1, "p2": this.param2, "p3": this.param3};
+  	var obj = {
+  		"dcSysSize": this.dcSysSize,
+  		"modType": this.modType,
+  		"arrType": this.arrType,
+  		"sysLoss": this.sysLoss,
+  		"tilt": this.tilt,
+  		"azimuth": this.azimuth
+  	};
   	console.log(obj);
-  	this.global.items.push(obj);
-  	this.navCtrl.pop();
+  	// this.global.items.push(obj);
+  	// this.navCtrl.pop();
   }
 
 }
